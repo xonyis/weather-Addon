@@ -1,0 +1,169 @@
+body {
+    min-width: 320px;
+    min-height: 480px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #4b6cb7 0%, #182848 100%);
+    margin: 0;
+    padding: 10px;
+}
+
+.weather-container {
+    max-width: 350px;
+    background: rgba(255,255,255,0.95);
+    border-radius: 18px;
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+    padding: 24px 18px 18px 18px;
+}
+
+.input-elevated{
+    font-size: 16px;
+    line-height: 1.5;
+    border: none;
+    background: #FFFFFF;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 20 20'><path fill='%23838D99' d='M13.22 14.63a8 8 0 1 1 1.41-1.41l4.29 4.29a1 1 0 1 1-1.41 1.41l-4.29-4.29zm-.66-2.07a6 6 0 1 0-8.49-8.49 6 6 0 0 0 8.49 8.49z'></path></svg>");
+    background-repeat: no-repeat;
+    background-position: 10px 10px;
+    background-size: 20px 20px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+    border-radius: 8px;
+    width: 75%;
+    margin: auto;
+    padding: .5em 1em .5em 2.5em;
+    margin-bottom: 12px;
+} 
+.input-elevated::placeholder{
+    color: #838D99;
+}
+.input-elevated:focus {
+    outline: none;
+    box-shadow: 0 4px 16px 0 rgba(0,0,0,0.16);
+}
+#autocomplete-list {
+    border-radius: 8px;
+    position: absolute;
+    background: #fff;
+    max-height: 200px;
+    overflow-y: auto;
+    width: 95%;
+    z-index: 10;
+    margin-top: 20px;
+    margin-top: 45px;
+    list-style: none;
+    padding: 0;
+    font-size: 15px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.10);
+}
+#autocomplete-list li {
+    border-radius: 8px;
+    padding: 8px 12px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+#autocomplete-list li:hover {
+    background: #e3e3e3;
+    border-radius: 8px;
+}
+#city-form {
+    position: relative;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+.weather-card {
+    background: linear-gradient(120deg, #e0eafc 0%, #cfdef3 100%);
+    border-radius: 14px;
+    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.07);
+    padding: 18px 10px 10px 10px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+.weather-card img {
+    width: 70px;
+    height: 70px;
+}
+.weather-card h2 {
+    margin: 0.2em 0 0.1em 0;
+    font-size: 2.2em;
+    color: #222;
+}
+.weather-card p {
+    margin: 0.2em 0;
+    color: #444;
+}
+.forecast-list {
+    margin-top: 8px;
+    border-radius: 12px;
+    background: #f7fafd;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+    padding: 10px 0 10px 0;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 8px;
+    scrollbar-width: thin;
+    scrollbar-color: #b0b0b0 #f7fafd;
+}
+.forecast-list::-webkit-scrollbar {
+    height: 8px;
+}
+.forecast-list::-webkit-scrollbar-thumb {
+    background: #b0b0b0;
+    border-radius: 8px;
+}
+.forecast-list::-webkit-scrollbar-track {
+    background: #f7fafd;
+    border-radius: 8px;
+}
+.forecast-list .forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 110px;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,0.04);
+    padding: 14px 8px 10px 8px;
+    margin: 0;
+    border: none;
+    transition: box-shadow 0.2s;
+}
+.forecast-list .forecast-item:hover {
+    box-shadow: 0 4px 16px 0 rgba(25, 118, 210, 0.10);
+}
+.forecast-list .day-name {
+    width: auto;
+    font-size: 1em;
+    font-weight: 500;
+    color: #2a3a4a;
+    margin-bottom: 4px;
+}
+.forecast-list img {
+    width: 38px;
+    height: 38px;
+    margin: 0 0 6px 0;
+}
+.forecast-list .desc {
+    flex: none;
+    font-size: 0.95em;
+    color: #4a5a6a;
+    text-transform: capitalize;
+    margin-bottom: 4px;
+    text-align: center;
+}
+.forecast-list .temps {
+    text-align: center;
+    font-size: 1em;
+    min-width: 60px;
+}
+.forecast-list .temps strong {
+    color: #1976d2;
+    font-weight: 600;
+}
+@media (max-width: 400px) {
+    .weather-container {
+        padding: 10px 2px 10px 2px;
+    }
+    .forecast-list .forecast-item {
+        margin: 0 4px;
+    }
+}

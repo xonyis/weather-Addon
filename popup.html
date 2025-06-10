@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Météo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="weather-container">
+    <form id="city-form" autocomplete="off">
+      <input class="input-elevated" id="city-input" type="text" placeholder="Entrez une ville..." autocomplete="off">
+      <ul id="autocomplete-list"></ul>
+    </form>
+    <div id="current-weather" class="weather-card">
+      <p>Entrez une ville pour voir sa météo.</p>
+    </div>
+    <h3 style="margin: 10px 0 16px 0; font-size: 1.1em; color: #1976d2; text-align:center; letter-spacing:1px;">Prévisions 5 jours</h3>
+    <div id="forecast" class="forecast-list"></div>
+  </div>
+  <script src="popup.js"></script>
+</body>
+</html>
