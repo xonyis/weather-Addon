@@ -5,7 +5,7 @@
 1. **Télécharger le code**
    ```bash
    git clone [URL_DU_REPO]
-   cd Smart-Tab-Grouper
+   cd weather-addon
    ```
 
 2. **Ouvrir Chrome**
